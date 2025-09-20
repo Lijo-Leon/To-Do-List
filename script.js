@@ -12,12 +12,12 @@ function addTask() {
         let li = document.createElement("li");
 
         li.innerHTML = `
-            <div class="flex items-center justify-left relative lg:w-[510px]">
-                <img src="./tickbg.png" class="w-[45px]" alt="">
+            <div class="flex items-center justify-left relative lg:w-[680px] bg-blue-50 shadow-lg rounded-lg px-3 py-2 rounded-lg">
+                <img src="./tickbg.png" class="w-[40px]" alt="">
                 <span class="task-text ml-4">${task}</span>
-                <div class="btn-div flex absolute right-0">
-                    <button type="button" onclick="editTask(this)" class="px-[30px] py-[8px] ml-20 bg-green-500 text-white">Edit</button>
-                    <button onclick="deleteTask(this)" class="px-[30px] py-[8px] ml-2 bg-red-500 text-white">Delete</button>
+                <div class="btn-div flex absolute right-4">
+                    <button type="button" onclick="editTask(this)" class="px-[30px] py-[8px] ml-20 bg-green-500 text-white rounded">Edit</button>
+                    <button onclick="deleteTask(this)" class="px-[30px] py-[8px] ml-2 bg-red-500 text-white rounded">Delete</button>
                 </div>
             </div>
         `;
