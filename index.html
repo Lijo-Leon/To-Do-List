@@ -2,41 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ToDo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-white">
-  <div class="main w-full min-h-screen flex flex-col lg:flex-row items-center justify-center p-4 lg:p-0">
-    
-    <div class="left lg:w-1/2 w-full flex items-center justify-center mb-8 lg:mb-0">
-      <img src="./to-do img.jpg" class="w-[300px] sm:w-[400px] md:w-[500px] h-auto" alt="To-Do Illustration">
+<body class="px-7 overflow-hidden bg-blue-100">
+    <div class="main w-full  flex flex-col lg:flex-row items-center justify-center p-4 lg:p-0">
+
+        <div
+            class="left bg-white lg:w-[40%] w-full flex flex-col items-center justify-center mb-8 lg:mb-0 border-2 p-10 rounded-3xl shadow-lg">
+            <h1 class="text-3xl text-blue-900 lg:text-4xl font-bold mb-2">Get Things Done</h1>
+            <p class="text-indigo-900">Organize your tasks and boost your productivity</p>
+            <img src="./to-do img.jpg" class="w-[300px] sm:w-[400px] md:w-[400px] h-auto" alt="To-Do Illustration">
+        </div>
+
+        <div class="right w-full lg:w-1/2 px-4 sm:px-6 lg:px-8 lg:h-[100vh] lg:pt-28 lg:pl-20 relative">
+            <h1 class="text-2xl sm:text-3xl font-bold mb-6 text-center lg:text-left text-blue-900">TO-DO LIST</h1>
+
+            <div class="flex sm:flex-row items-center justify-center lg:justify-start mb-6 gap-4">
+                <input type="text" id="taskInput"
+                    class="bg-gray-50 shadow border-[2px] border-gray-300 text-gray-900 text-sm rounded-lg block w-full sm:w-[300px] md:w-[350px] lg:w-[450px] p-2.5 focus:border-blue-800 transition-all focus:outline-none"
+                    placeholder="Enter task..." />
+
+                <button type="button" onclick="addTask()"
+                    class="text-blue-600 text-3xl hover:text-blue-800 transition-colors duration-200">
+                    <i class="fa-solid fa-circle-plus text-blue-800"></i>
+                </button>
+            </div>
+
+            <div id="alert" class="alert absolute right-0 top-14 ">
+                <div class="   bg-red-400 px-7 py-2 rounded-lg text-white hidden">
+                    <p>Enter Task!</p>
+                </div>
+            </div>
+
+
+            <ul id="taskList" class="space-y-3"></ul>
+        </div>
+
     </div>
 
-    <div class="right w-full lg:w-1/2 px-4 sm:px-6 lg:px-8 lg:h-[100vh] lg:pt-28 ">
-      <h1 class="text-2xl sm:text-3xl font-bold mb-6 text-center lg:text-left">TO-DO LIST</h1>
-
-      <div class="flex sm:flex-row items-center justify-center lg:justify-start mb-6 gap-4">
-        <input type="text" id="taskInput"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full sm:w-[300px] md:w-[350px] lg:w-[450px] p-2.5 focus:ring-blue-500 focus:border-blue-500"
-          placeholder="Enter task...">
-        <button type="button" onclick="addTask()" class="text-blue-600 text-3xl hover:text-blue-800 transition-colors duration-200">
-          <i class="fa-solid fa-circle-plus"></i>
-        </button>
-      </div>
-
-
-      <ul id="taskList" class="space-y-3"></ul>
-    </div>
-
-  </div>
-
-  <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
