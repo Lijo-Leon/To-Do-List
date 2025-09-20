@@ -12,7 +12,7 @@ function addTask() {
         let li = document.createElement("li");
 
         li.innerHTML = `
-            <div class="flex items-center justify-left relative lg:w-[680px] bg-blue-50 hover:bg-[#ffffff] transition-all duration-600 shadow-lg hover:scale-[1.009] px-3 py-2 rounded-lg">
+            <div class="flex items-center justify-left relative lg:w-[680px] bg-[#ffffff] hover:bg-[#e6f1ff] transition-all duration-600 shadow-lg hover:scale-[1.009] px-3 py-2 rounded-lg">
                 <img src="./tickbg.png" class="w-[40px]" alt="">
                 <span class="task-text ml-4 font-semibold">${task}</span>
                 <div class="btn-div flex absolute right-5">
