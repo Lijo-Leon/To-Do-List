@@ -4,7 +4,7 @@ function addTask() {
 
     if (task === "") {
         showAlert(`
-            <div class="bg-red-400 px-7 py-2 rounded-lg text-white">
+            <div class="bg-red-500 px-7 py-2 rounded-lg text-white">
                 <p><i class="fa-solid fa-triangle-exclamation mr-2"></i>Enter Task!</p>
             </div>
         `);
